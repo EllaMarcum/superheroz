@@ -2,7 +2,7 @@ const hero = {
   Gandalf: {
     health: 100,
     lv: 0,
-    status: 'ready to kick ass',
+    status: 'alive',
     img: 'https://th.bing.com/th/id/R.6990db9caf2e499b4b69a4b28e29637b?rik=c9mm8cevOSRxtw&riu=http%3a%2f%2fimg07.deviantart.net%2f72af%2fi%2f2011%2f345%2ff%2f0%2fi_geek_weekly__gandalf_the_grey_by_joshuafitzpatrick-d4iufqz.png&ehk=5C1BwJIW1HQSLERf7KDG%2fNepgVD3K%2bFx1k2h4AdOst4%3d&risl=&pid=ImgRaw&r=0',
   },
 }
@@ -10,7 +10,7 @@ const boss = {
   Balrog: {
     health: 100,
     lv: 0,
-    status: 'evil mofo',
+    status: 'alive',
     img: 'https://designlooter.com/images/balrog-coloring-18.jpg',
     },
 }
@@ -42,7 +42,7 @@ function drawBoss() {
     let chars = boss[key]
     console.log(boss, "charater")
     template += `         
-    <div class="col-10 offset-1 boss-card text-center" >
+    <div class="col-10 offset-1 boss-card text-center" onclick('${key}')>
     <div class="m-0"><b>NAME : ${key}</b></div>
     <img class="align-items-left m-1"
       src="${chars.img}">
@@ -61,3 +61,12 @@ function drawBoss() {
 }
 drawHero()
 drawBoss()
+
+function attack(key){
+let chars = boss[key]
+console.log("attacking",key, chars)
+if(chars.status != 'dead'){
+  chars.health -= 5; 
+}
+drawBoss()
+}
