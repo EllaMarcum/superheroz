@@ -71,3 +71,10 @@ function attack(key) {
   }
   drawBoss()
 }
+function health(){
+  let char = hero[key]
+  console.log("health", health)
+  if (char.health > 0)
+}
+
+setInterval(health, 3000)
