@@ -53,7 +53,7 @@ function drawBoss() {
     <p><b>Lvl : 4</b></p>
   </div>
     `
-    let charElm = document.getElementById('char')
+    let charElm = document.getElementById('boss')
     charElm.innerHTML = template
   }
 
