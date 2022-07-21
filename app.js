@@ -7,12 +7,12 @@ const hero = {
   },
 }
 const boss = {
-  Balrog: {
+  balrog: {
     health: 100,
     lv: 0,
     status: 'alive',
     img: 'https://designlooter.com/images/balrog-coloring-18.jpg',
-    },
+  },
 }
 
 
@@ -42,7 +42,7 @@ function drawBoss() {
     let chars = boss[key]
     console.log(boss, "charater")
     template += `         
-    <div class="col-10 offset-1 boss-card text-center" onclick('${key}')>
+    <div class="col-10 offset-1 boss-card text-center" onclick="attack('${key}')">
     <div class="m-0"><b>NAME : ${key}</b></div>
     <img class="align-items-left m-1"
       src="${chars.img}">
@@ -62,11 +62,11 @@ function drawBoss() {
 drawHero()
 drawBoss()
 
-function attack(key){
-let chars = boss[key]
-console.log("attacking",key, chars)
-if(chars.status != 'dead'){
-  chars.health -= 5; 
-}
-drawBoss()
+function attack(key) {
+  let chars = boss[key]
+  console.log("attacking", key, chars)
+  if (chars.health > 0) {
+    chars.health -= 5;
+  }
+  drawBoss()
 }
