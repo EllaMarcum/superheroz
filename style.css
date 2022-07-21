@@ -1,0 +1,33 @@
+body {
+  background-color: #1b3022;
+}
+
+.hero-thing {
+  background-color: #395756;
+  border: 3px solid;
+  border-color: whitesmoke;
+  border-radius: 3px;
+  color: whitesmoke;
+}
+
+.hero-thing img {
+  height: 7em;
+  width: 85%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.boss-card {
+  background-color: #4F5D75;
+  border: 3px solid;
+  border-color: whitesmoke;
+  border-radius: 3px;
+  color: whitesmoke;
+}
+
+.boss-card img {
+  height: 18em;
+  width: 80%;
+  object-fit: cover;
+  object-position: center;
+}
