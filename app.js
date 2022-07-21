@@ -7,7 +7,7 @@ const hero = {
   },
 }
 const boss = {
-  balrog: {
+  Balrog: {
     health: 100,
     lv: 0,
     status: 'alive',
@@ -50,7 +50,8 @@ function drawBoss() {
       <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
         aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
         style="width: ${chars.health}%"></div>
-    </div>
+        </div>
+        <div>${chars.health}</div>
     <p><b>Lvl : ${chars.lv}</b></p>
   </div>
     `
